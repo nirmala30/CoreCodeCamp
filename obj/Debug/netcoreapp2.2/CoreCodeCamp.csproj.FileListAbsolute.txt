@@ -17,7 +17,6 @@ D:\Study Room\PluralSight\API\CoreCodeCamps\src\bin\Debug\netcoreapp2.2\CoreCode
 D:\Study Room\PluralSight\API\CoreCodeCamps\src\bin\Debug\netcoreapp2.2\CoreCodeCamp.runtimeconfig.dev.json
 D:\Study Room\PluralSight\API\CoreCodeCamps\src\bin\Debug\netcoreapp2.2\CoreCodeCamp.dll
 D:\Study Room\PluralSight\API\CoreCodeCamps\src\bin\Debug\netcoreapp2.2\CoreCodeCamp.pdb
-D:\Study Room\PluralSight\API\CoreCodeCamps\src\obj\Debug\netcoreapp2.2\CoreCodeCamp.csprojAssemblyReference.cache
 D:\Study Room\PluralSight\API\CoreCodeCamps\src\obj\Debug\netcoreapp2.2\CoreCodeCamp.csproj.CoreCompileInputs.cache
 D:\Study Room\PluralSight\API\CoreCodeCamps\src\obj\Debug\netcoreapp2.2\CoreCodeCamp.RazorAssemblyInfo.cache
 D:\Study Room\PluralSight\API\CoreCodeCamps\src\obj\Debug\netcoreapp2.2\CoreCodeCamp.RazorAssemblyInfo.cs
