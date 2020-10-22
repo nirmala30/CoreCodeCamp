@@ -1,0 +1,14 @@
+D:\Study Room\PluralSight\API\CoreApiFundamentals\src\bin\Debug\netcoreapp2.1\CoreCodeCamp.deps.json
+D:\Study Room\PluralSight\API\CoreApiFundamentals\src\bin\Debug\netcoreapp2.1\CoreCodeCamp.runtimeconfig.json
+D:\Study Room\PluralSight\API\CoreApiFundamentals\src\bin\Debug\netcoreapp2.1\CoreCodeCamp.runtimeconfig.dev.json
+D:\Study Room\PluralSight\API\CoreApiFundamentals\src\bin\Debug\netcoreapp2.1\CoreCodeCamp.dll
+D:\Study Room\PluralSight\API\CoreApiFundamentals\src\bin\Debug\netcoreapp2.1\CoreCodeCamp.pdb
+D:\Study Room\PluralSight\API\CoreApiFundamentals\src\obj\Debug\netcoreapp2.1\CoreCodeCamp.csproj.CoreCompileInputs.cache
+D:\Study Room\PluralSight\API\CoreApiFundamentals\src\obj\Debug\netcoreapp2.1\CoreCodeCamp.RazorAssemblyInfo.cache
+D:\Study Room\PluralSight\API\CoreApiFundamentals\src\obj\Debug\netcoreapp2.1\CoreCodeCamp.RazorAssemblyInfo.cs
+D:\Study Room\PluralSight\API\CoreApiFundamentals\src\obj\Debug\netcoreapp2.1\CoreCodeCamp.AssemblyInfoInputs.cache
+D:\Study Room\PluralSight\API\CoreApiFundamentals\src\obj\Debug\netcoreapp2.1\CoreCodeCamp.AssemblyInfo.cs
+D:\Study Room\PluralSight\API\CoreApiFundamentals\src\obj\Debug\netcoreapp2.1\CoreCodeCamp.RazorTargetAssemblyInfo.cache
+D:\Study Room\PluralSight\API\CoreApiFundamentals\src\obj\Debug\netcoreapp2.1\CoreCodeCamp.dll
+D:\Study Room\PluralSight\API\CoreApiFundamentals\src\obj\Debug\netcoreapp2.1\CoreCodeCamp.pdb
+D:\Study Room\PluralSight\API\CoreApiFundamentals\src\obj\Debug\netcoreapp2.1\CoreCodeCamp.csprojAssemblyReference.cache
