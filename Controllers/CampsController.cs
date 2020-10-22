@@ -88,6 +88,7 @@ namespace CoreCodeCamp.Controllers
         {
             try
             {
+                //***** unique can be verified in DB*****//
                 //var exists = _repository.GetCampAsync(campModel.Moniker);
 
                 //if(exists != null)
