@@ -83,25 +83,24 @@ namespace CoreCodeCamp.Controllers
             }
         }
 
- 
+        [HttpPost]
         public async Task<ActionResult<CampModel>> Post(CampModel campModel)
         {
             try
             {
                 //***** unique can be verified in DB*****////
-                //var exists = _repository.GetCampAsync(campModel.Moniker);
+                var oldCamp = _repository.GetCampAsync(campModel.Moniker);
 
-                //if(exists != null)
-                //{
-                //    BadRequest("Moniker is in use");
-                //}
+                if(oldCamp != null)
+                {
+                    BadRequest($"Moniker {campModel.Moniker} is in use");
+                }
                 var location = _linkGenerator.GetPathByAction("GetCampAsync", "Camps", new {campModel.Moniker });
 
                 if(string.IsNullOrEmpty(location))
                 {
-                    BadRequest("Could not use the current moniker");
+                    return BadRequest("Could not use the current moniker");
                 }
-
 
                 var camp = _mapper.Map<Camp>(campModel);
 
@@ -117,6 +116,54 @@ namespace CoreCodeCamp.Controllers
             {
                 return StatusCode(StatusCodes.Status500InternalServerError);
             }
+        }
+
+        [HttpPut("{moniker}")]
+        public async Task<ActionResult<CampModel>> Put(string moniker, CampModel campModel)
+        {
+            try
+            {
+                var oldModel = await _repository.GetCampAsync(campModel.Moniker);
+
+                if (oldModel == null) return NotFound($"No record found for {moniker}");
+
+                _mapper.Map(campModel, oldModel);
+
+                if(await _repository.SaveChangesAsync())
+                {
+                    return _mapper.Map<CampModel>(oldModel);
+                }
+            }
+            catch(Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+
+            return BadRequest($"Failed to update record for {moniker}");
+        }
+
+        [HttpDelete("{moniker}")]
+        public async Task<IActionResult> Delete(string moniker)
+        {
+            try
+            {
+                var oldCamp = await _repository.GetCampAsync(moniker);
+
+                if (oldCamp == null) return NotFound($"No record found for {moniker}");
+
+                _repository.Delete(oldCamp);
+
+                if(await _repository.SaveChangesAsync())
+                {
+                    return Ok($"Record with moniker {moniker} is deleted");
+                }
+
+            }catch(Exception ex)
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+
+            return BadRequest($"Failed to delete record with moniker {moniker}");
         }
     }
 }
