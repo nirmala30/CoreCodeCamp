@@ -89,13 +89,13 @@ namespace CoreCodeCamp.Controllers
             try
             {
                 //***** unique can be verified in DB*****////
-                var oldCamp = _repository.GetCampAsync(campModel.Moniker);
+                var oldCamp = await _repository.GetCampAsync(campModel.Moniker);
 
                 if(oldCamp != null)
                 {
-                    BadRequest($"Moniker {campModel.Moniker} is in use");
+                    return StatusCode(StatusCodes.Status409Conflict, $"Moniker {campModel.Moniker} is in use");
                 }
-                var location = _linkGenerator.GetPathByAction("GetCampAsync", "Camps", new {campModel.Moniker });
+                var location =  _linkGenerator.GetPathByAction("GetCampAsync", "Camps", new {campModel.Moniker });
 
                 if(string.IsNullOrEmpty(location))
                 {
@@ -104,7 +104,7 @@ namespace CoreCodeCamp.Controllers
 
                 var camp = _mapper.Map<Camp>(campModel);
 
-                _repository.Add(camp);
+                 _repository.Add(camp);
 
                 if(await _repository.SaveChangesAsync())
                 {
